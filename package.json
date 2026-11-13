@@ -1,0 +1,12 @@
+{
+  "name": "projeto09-reserva-salas",
+  "version": "1.0.0",
+  "private": true,
+  "description": "CRUD de salas e reservas com Node.js sem frameworks",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

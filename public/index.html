@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Reserva de salas</title><link rel="stylesheet" href="/style.css"><script src="/script.js" defer></script></head>
+<body><main><h1>Reserva de salas</h1><p id="mensagem" role="status"></p>
+<h2>Salas</h2>
+<form id="form-sala"><input name="id" type="hidden"><label>Nome ou identificação<input name="nome" required></label><label>Localização<input name="localizacao" required></label><label>Capacidade máxima<input name="capacidade" type="number" min="1" step="1" required></label><label>Recursos disponíveis<input name="recursos" placeholder="Se não houver, informe Nenhum" required></label><label>Situação<select name="situacao"><option>Disponível</option><option>Inativa</option></select></label><button type="submit">Salvar sala</button><button type="reset">Limpar</button></form>
+<div class="tabela"><table><thead><tr><th>Sala</th><th>Localização</th><th>Capacidade</th><th>Recursos</th><th>Situação</th><th>Ações</th></tr></thead><tbody id="salas"></tbody></table></div>
+<h2>Reservas</h2>
+<form id="form-reserva"><input name="id" type="hidden"><label>Aluno responsável<input name="aluno" required></label><label>E-mail<input name="email" type="email" required></label><label>Sala<select name="salaId" required></select></label><label>Data<input name="data" type="date" required></label><p id="feriado" role="status"></p><label>Horário inicial<input name="horaInicio" type="time" required></label><label>Horário final<input name="horaFim" type="time" required></label><label>Participantes<input name="participantes" type="number" min="1" step="1" required></label><label>Finalidade<input name="finalidade" required></label><label>Status<select name="status"><option>Ativa</option><option>Cancelada</option></select></label><button type="submit">Salvar reserva</button><button type="reset">Limpar</button></form>
+<form id="filtros" class="filtros"><label>Data<input name="data" type="date"></label><label>Sala<select name="salaId"><option value="">Todas</option></select></label><label>Status<select name="status"><option value="">Todos</option><option>Ativa</option><option>Cancelada</option></select></label><button type="submit">Pesquisar</button><button id="limpar-filtros" type="button">Limpar filtros</button></form>
+<div class="tabela"><table><thead><tr><th>Aluno</th><th>Sala</th><th>Data</th><th>Horário</th><th>Participantes</th><th>Status</th><th>Ações</th></tr></thead><tbody id="reservas"></tbody></table></div>
+<h2>Consulta do registro</h2><pre id="detalhes">Clique em Consultar em uma das listagens.</pre>
+</main></body></html>
